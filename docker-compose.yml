@@ -1,0 +1,31 @@
+
+services:
+  nextjs:
+    build:
+      context: ./nextjs-app
+      dockerfile: Dockerfile
+    environment:
+      - JWT_SECRET=${JWT_SECRET}
+      - PDF_SERVICE_URL=http://php-pdf:8080
+      - FLAG1=${FLAG1}
+    ports:
+      - "3000:3000"
+    depends_on:
+      - php-pdf
+    networks:
+      - internal
+
+  php-pdf:
+    build:
+      context: ./php-pdf
+      dockerfile: Dockerfile
+    environment:
+      FLAG2: "${FLAG2}"
+    expose:
+      - "8080"
+    networks:
+      - internal
+
+networks:
+  internal:
+    driver: bridge

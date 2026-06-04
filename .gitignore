@@ -1,0 +1,6 @@
+nextjs-app/.next/
+nextjs-app/node_modules/
+php-pdf/vendor/
+*.pdf
+.env
+.env.local
