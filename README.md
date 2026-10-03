@@ -1,5 +1,5 @@
 # CTF Challenge: MiddleChain
-
+**專案文件：** [HackMD 完整報告](https://hackmd.io/HIGiiXpqQJypf1Dil_prgQ)
 > **CVE-2025-29927** (Next.js Middleware Authorization Bypass) → **CVE-2024-56520** (TCPDF PHP Code Injection via Malicious Font File)
 
 ## 題目故事
